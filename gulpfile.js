@@ -1,17 +1,35 @@
 
 //-----> DEPENDENCIAS
 var gulp = require('gulp'),
-	uglify = require('gulp-uglify'),
-	clean = require('gulp-clean');
+	htmlminify = require('gulp-minify-html'),
+	minify = require('gulp-minify'),
+	clean = require('gulp-clean'),
+  uglify = require('gulp-uglify'),
+  cleancss = require('gulp-clean-css');
 
 //-----> CONFIGURACIÓN DE LAS TAREAS
-gulp.task('uglify', function() {
-  gulp.src('js/*.js')
+gulp.task('minify-js', function() {
+  gulp.src(['js/*.js', 'conversor_test.js'])
     .pipe(uglify())
-    .pipe(gulp.dest('minified/'))
+    .pipe(gulp.dest('minified/js/'))
+});
+
+gulp.task('minify-css', function() {
+  return gulp.src('vendor/*.css')
+    .pipe(cleancss({compatibility: 'ie8'}))
+    .pipe(gulp.dest('minified/css'));
+})
+
+gulp.task('minify-html', function() {
+  return gulp.src('*.html')
+    .pipe(htmlminify({collapseWhitespace: true}))
+    .pipe(gulp.dest('minified/html'))
 });
 
 gulp.task('clean', function () {
 	return gulp.src('minified/', {read: false})
 		.pipe(clean());
+});
+
+gulp.task('default', ['minify-js', 'minify-css', 'minify-html'], function() { // Tarea por defecto. Ejecutamos todas las pruebas minify.
 });
