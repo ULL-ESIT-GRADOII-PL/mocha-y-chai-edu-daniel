@@ -2,6 +2,8 @@
 Este repositorio aloja la práctica de Mocha, Chai y Sinon. Además del
 uso posterior de blanketjs y el fichero gulpfile.js.
 
+#### **¡NECESARIO EJECUTAR npm install PARA INCLUIR DEPENDENCIAS!**
+
 ##### Realizada por Daniel Antonio Fernández Pérez y Eduardo Escobar Alberto (Equipo edu-daniel)
 
 **Campus Virtual de la Asignatura**
@@ -12,9 +14,9 @@ uso posterior de blanketjs y el fichero gulpfile.js.
 
 * [Repositorio](https://github.com/ULL-ESIT-GRADOII-PL/mocha-y-chai-edu-daniel)
 
-**Página de la Práctica**
+**GitHub Page de la Práctica**
 
-* [Web]()
+* [GitHub Page](http://ull-esit-gradoii-pl.github.io/mocha-y-chai-edu-daniel/)
 
 **Páginas Personales de los Autores**
 
