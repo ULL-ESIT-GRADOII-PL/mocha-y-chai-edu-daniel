@@ -9,7 +9,7 @@ var gulp = require('gulp'),
 
 //-----> CONFIGURACIÓN DE LAS TAREAS
 gulp.task('minify-js', function() {
-  gulp.src(['js/*.js', 'conversor_test.js'])
+  gulp.src(['js/*.js', 'conversor_test.js', 'vendor/*.js'])
     .pipe(uglify())
     .pipe(gulp.dest('minified/js/'))
 });
